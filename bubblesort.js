@@ -29,3 +29,44 @@ function bubbleSort(arr) {
 }
 
 console.log(bubbleSort([4, 8, 5, 2, 9]));
+
+// Diagram:
+
+// First sort:
+//   arr[4,8,5,2,9]
+
+//  i   element     'if'    swap?   Array
+//  0      4        false    no     [4,8,5,2,9]
+//  1      8        true     yes    [4,5,8,2,9]
+//  2      8        true     yes    [4,5,2,8,9]
+//  3      8        false    no     [4,5,2,8,9]
+
+// Second sort:
+//   arr[4,5,2,8,9]
+//
+//  i    element     'if'    swap?   Array
+//  0      4          false   no    [4,5,2,8,9]
+//  1      5         true     yes   [4,2,5,8,9]
+//  2      5         false    no    [4,2,5,8,9]
+//  3      8         false    no    [4,2,5,8,9]
+
+// Third sort:
+//  arr[4,2,5,8,9]
+
+// i      element    'if'    swap?   Array
+// 0       4         true    yes     [2,4,5,8,9]
+// 1       4         false    no     [2,4,5,8,9]
+// 2       5         false    no     [2,4,5,8,9]
+//  3      8         false    no     [2,4,5,8,9]
+
+//  Fourth sort:
+//   arr[2,4,5,8,9]
+
+//   i    eleement    'if'   swap?    Array
+//   0      2         false   no     [2,4,5,8,9]
+//   1      4         false   no     [2,4,5,8,9]
+//   2      5         false   no     [2,4,5,8,9]
+//   3      8         false   no     [2,4,5,8,9]
+
+//   swapped = false;
+//    return array [2,4,5,8,9]
